@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Reading Bookmark \u2014 Resume Where You Left Off",
+  "version": "1.0",
+  "description": "Remembers your scroll position on long blog posts and lets you mark a spot manually so you can resume exactly where you left off.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Reading Bookmark"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

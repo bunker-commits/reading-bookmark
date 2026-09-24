@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        width: 300px;
+        padding: 14px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 8px;
+      }
+      .empty {
+        font-size: 12px;
+        padding: 8px;
+        background: #f5f5f5;
+        border-radius: 6px;
+        color: #666;
+      }
+      .mark-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        margin-bottom: 6px;
+      }
+      .mark-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .mark-pct {
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .mark-snippet {
+        font-size: 11px;
+        color: #777;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .mark-time {
+        font-size: 10px;
+        color: #999;
+      }
+      .mark-actions {
+        display: flex;
+        gap: 4px;
+      }
+      .mark-actions button {
+        border: none;
+        border-radius: 5px;
+        font-size: 11px;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+      .btn-go {
+        background: #1a1a1a;
+        color: #fff;
+      }
+      .btn-del {
+        background: #f5e6e6;
+        color: #a33;
+      }
+      .auto-status {
+        font-size: 11px;
+        color: #888;
+        margin-top: 6px;
+        padding: 6px 8px;
+        background: #fafafa;
+        border-radius: 6px;
+      }
+      button.wide {
+        width: 100%;
+        padding: 8px;
+        margin-top: 8px;
+        border: none;
+        border-radius: 6px;
+        background: #eee;
+        color: #333;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .hint {
+        font-size: 11px;
+        color: #888;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📍 Reading Bookmark</h1>
+    <div id="marksList"></div>
+    <div id="autoStatus" class="auto-status" style="display:none"></div>
+    <button id="clearPage" class="wide">Clear all spots for this page</button>
+    <button id="clearAll" class="wide">Clear all saved spots everywhere</button>
+    <div class="hint">Tip: select text, then click "Mark spot" (or Alt/Option+Shift+M) to save that exact spot.</div>
+    <script src="popup.js"></script>
+  </body>
+</html>
