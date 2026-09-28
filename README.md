@@ -17,7 +17,7 @@ This extension isn't on the Chrome Web Store (to keep it free and dependency-fre
 
 1. Download this repo:
    - **Option A** — click **Code → Download ZIP** on this GitHub page, then unzip it.
-   - **Option B** — or clone it: `git clone https://github.com/<bunker-commits>/reading-bookmark.git`
+   - **Option B** — or clone it: `git clone https://github.com/bunker-commits/reading-bookmark.git`
    - **Option C** — grab a pre-built zip from the [Releases](../../releases) page, if one has been published.
 2. Open `chrome://extensions` in Chrome.
 3. Turn on **Developer mode** (top-right toggle).
