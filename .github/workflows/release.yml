@@ -1,0 +1,29 @@
+name: Package release zip
+
+# Push a tag like "v1.1" to trigger this. It zips the extension folder and
+# attaches it to a GitHub Release, so people can download it without cloning.
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build zip
+        run: |
+          mkdir -p dist
+          zip -r "dist/reading-bookmark-${GITHUB_REF_NAME}.zip" . \
+            -x ".git/*" ".github/*" "dist/*" ".gitignore" "LICENSE"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
+          generate_release_notes: true
